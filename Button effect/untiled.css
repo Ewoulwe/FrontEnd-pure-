@@ -3,9 +3,6 @@
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0px;
     padding: 0px;
     background: rgb(16, 14, 107);
@@ -13,7 +10,7 @@ body
 
 div
 {
-    width: 60%;
+    width: 1000px;
     height: 100px;
     background: rgba(16, 14, 107, 0.808);
     display: flex;
@@ -21,6 +18,9 @@ div
     align-items: center;
     box-shadow: 2px 2px 20px black;
     z-index: 3;
+    bottom: 0px;
+    position: absolute;
+    
 }
 div ul
 {
@@ -45,6 +45,7 @@ div ul li
     justify-content: center;
     align-items: center;
     z-index: 5;
+    cursor: pointer;
 }
 div ul li:hover
 {
@@ -58,10 +59,10 @@ div ul li:hover
     height: 60px;
     background: yellow;
     z-index: 2;
-    position: relative;
-    top: -35px;
+    position: absolute;
+    top: -30px;
     border-radius: 10px;
-    left: -392px;
+    left: 0px;
     box-shadow: 0 0 15px yellow,
     0 0 30px yellow,
     0 0 45px yellow;

@@ -13,7 +13,22 @@
             <li><ion-icon name="clipboard-outline"></ion-icon></li>
             <li><ion-icon name="chatbox-ellipses-outline"></ion-icon></li>
             <li><ion-icon name="person-outline"></ion-icon></li>
+            <div class="marker"></div>
         </ul>
-        <div class="marker"></div>
     </div>
 </body>
+
+<script>
+    let marker = document.querySelector(".marker");
+    let list = document.querySelectorAll ("ul li");
+
+    list.forEach(link =>{
+        link.addEventListener('click',(e) =>{
+            console.log(link.offsetLeft)
+            marker.style.left = link.offsetLeft +20 + 'px';
+            marker.style.top = link.offsetTop -20  + 'px';
+        })
+    })
+    
+
+</script>
