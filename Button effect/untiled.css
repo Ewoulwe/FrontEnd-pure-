@@ -1,0 +1,68 @@
+
+
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(16, 14, 107);
+}
+
+div
+{
+    width: 60%;
+    height: 100px;
+    background: rgba(16, 14, 107, 0.808);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 20px black;
+    z-index: 3;
+}
+div ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    
+}
+div ul li
+{
+    margin: 20px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(25px);
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+div ul li:hover
+{
+    color: white;
+    transition: 0.5s;
+}
+
+.marker
+{
+    width: 60px;
+    height: 60px;
+    background: yellow;
+    z-index: 2;
+    position: relative;
+    top: -35px;
+    border-radius: 10px;
+    left: -392px;
+    box-shadow: 0 0 15px yellow,
+    0 0 30px yellow,
+    0 0 45px yellow;
+}
