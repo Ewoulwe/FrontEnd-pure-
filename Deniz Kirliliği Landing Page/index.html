@@ -1,0 +1,51 @@
+
+
+<link rel="stylesheet" href="index.css">
+<script src="https://kit.fontawesome.com/fd7aba4fca.js" crossorigin="anonymous"></script>
+
+<body>
+    
+    <div class="header">
+        <div class="header-waves">
+            <img id="wave1" src="/waves footer/wave (1).png" alt="">
+            <img id="wave2" src="/waves footer/wave (1).png" alt="">
+            <img id="wave3" src="/waves footer/wave (1).png" alt="">
+            <img id="wave4" src="/waves footer/wave (1).png" alt="">
+        </div>
+    
+    
+        <img class="background" src="/Deniz Kirliliği Landing Page/Sea_Sunset_Illustration_Background_with_Birds_and_Boats [Dönüştürülmüş].png" alt="">
+        <div class="background-2">
+            <img id="imgOne"  src="/Deniz Kirliliği Landing Page/Başlıksız-1.png" alt="">
+            <img id="imgTwo" class="background-3" src="/Deniz Kirliliği Landing Page/Başlıksız-4.png" alt="">
+            <img id="imgThree" class="background-3" src="/Deniz Kirliliği Landing Page/Başlıksız-2.png" alt="">
+        </div>
+    </div>
+    
+    
+    <div class="sea-body"></div>
+    
+    <div class="footer">
+
+    </div>
+
+</body>
+
+
+
+
+
+
+<script>
+    let imgOne = document.getElementById('imgOne')
+    let imgTwo = document.getElementById('imgTwo')
+
+    window.addEventListener("scroll", function() {
+    let scroll = this.scrollY;
+    console.log(scroll);
+
+    imgOne.style.top = 500+ scroll*-1 + "px";
+    imgTwo.style.left = 500+ scroll*-1 + "px";
+
+});
+</script>
