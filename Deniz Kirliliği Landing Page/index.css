@@ -19,6 +19,7 @@ body
     z-index: -10;
     height: 1400px;
     object-fit: cover;
+    user-select: none;
 }
 .background-2
 {
@@ -29,6 +30,8 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    overflow: hidden;
 }
 #imgOne
 {
@@ -81,6 +84,7 @@ body
     height: 500px;
     width: 100%;
     right: 600px;
+    overflow: hidden;
 }
 
 
@@ -94,6 +98,7 @@ body
     width: 100%;
     height: 800px;
     z-index: 100;
+    user-select: none;
 }
 #wave1
 {
@@ -104,6 +109,7 @@ body
     opacity: 1;
     animation: wave1 7s infinite;
     left: 0px;
+    user-select: none;
 }
 @keyframes wave1
 {
@@ -129,6 +135,7 @@ body
     opacity: 0.8;
     left: 0px;
     animation: wave2 7s infinite;
+    user-select: none;
 }
 @keyframes wave2
 {
@@ -154,6 +161,7 @@ body
     opacity: 0.5;
     animation: wave3 7s infinite;
     left: 0px;
+    user-select: none;
 }
 @keyframes wave3
 {
@@ -179,6 +187,7 @@ body
     opacity: 0.3;
     animation: wave4 7s infinite;
     left: 0px;
+    user-select: none;
 }
 @keyframes wave4
 {
@@ -209,8 +218,467 @@ body
 
 .footer
 {
-    background-color: black;
+    background: rgb(0, 0, 80);
     width: 100%;
     height: 300px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.footer h2
+{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    font-size: 15px;
+    font-weight: 200;
+    bottom: 0px;
+    
+}
+#wavefooter
+{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 10, 100);
+    position: absolute;
+    clip-path: polygon(100% 0%, 0% 0% , 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%,
+    4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%,
+    11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%,
+    18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%,
+    25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%,
+    32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%,
+    39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%,
+    47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%,
+    56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%,
+    66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%,
+    76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%,
+    86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%,
+    95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4%);
+}
+
+.social-media
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.social-media ul
+{
+    float: left;
+    background: none;
+    position: absolute;
+    top: 150px;
+}
+.social-media ul li
+{
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    float: left;
+    padding: 40px;
+    font-size: 30px;
+    background: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.social-media ul li:hover
+{
+    color: rgb(255, 183, 0);
+    transform: translateY(-10px);
+}
+
+
+#bubble
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0px;
+}
+
+.navbar
+{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 64, 107, 0.801);
+    border-bottom: 2px solid orange;
+    z-index: 1000;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.navbar i 
+{
+    color: white;
+    font-size: 40px;
+    border: 1px solid orange;
+    padding: 10px;
+    transition: 0.5s;
+    display: none;
+    position: relative;
+    left: -10px;
+}
+.navbar i:hover
+{
+    border-radius: 20px;
+    background: orange;
+    transition: 0.5s;
+}
+.navbar h1
+{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    position: relative;
+    font-size: 30px;
+}
+#scrollbar
+{
+    position: absolute;
+    width: var(--scrollAmount);
+    height: 5px;
+    background: orange;
+    top: 0px;
+    left: 0px;
+    --scrollAmount: 10%;
+}
+
+.navbar-buttons ul li
+{
+    float: left;
+    padding: 20px;
+    margin-left: 10px;
+    top: -10px;
+    position: relative;
+    color: white;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid orange;
+    transition: 0.5s;
+    left: -10px;
+}
+.navbar-buttons ul li:hover
+{
+    background: orange;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+
+.home-first
+{
+    width: 100%;
+    position: absolute;
+    height: 800px;
+    background: none;
+    top: 100px;
+    overflow: hidden;
+}
+.home-first h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 100px;
+    margin-left: 100px;
+    color: rgb(0, 83, 138);
+    text-shadow: 4px 3px 3px #CE5937;
+    left: 0px;
+}
+.home-first h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 100px;
+    color: rgb(0, 56, 93);
+    text-shadow: 4px 3px 3px #CE5937;
+    left: 0px;
+}
+#svg
+{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    left: 60%;
+    top: -200px;
+    z-index: 500;
+}
+.home-first button
+{
+    
+    top: 300px;
+    left: 180px;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: none;
+    border: 2px solid rgb(30, 202, 0) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+.home-first button:hover
+{
+    background: rgb(30, 202, 0) ;
+    transition: 0.5s;
+    border-radius: 0px;
+}
+.home-first button a
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+#svg h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(30, 202, 0);
+    text-shadow: 4px 3px 3px rgb(9, 58, 0);
+    top: 150px;
+    left: 50px;
+    position: absolute;
+}
+
+
+.WhoAreWe
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: rgb(0, 10, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.WhoAreWe h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    text-shadow: 4px 3px 3px rgb(0, 0, 0);
+    align-self: flex-start;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+}
+.WhoAreWe h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    align-self: flex-start;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 200;
+    position: relative;
+    top: 10px;
+    
+}
+
+.parallax-comments
+{
+    width: 100%;
+    height: 400px;
+    background: none;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.parallax-comments h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-justify: center;
+    color: orange;
+    position: relative;
+    text-shadow: 4px 3px 3px rgb(0, 0, 0);
+}
+#video
+{
+    position: fixed;
+    top: 00px;
+    z-index: -555;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.comments
+{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: rgba(255, 255, 255, 0.144);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.comments :nth-child(2)
+{
+    display: flex;
+}
+#left
+{
+    color: white;
+    align-self: center;
+    font-size: 40px;
+    left: 10px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#right
+{
+    color: white;
+    align-self: center;
+    font-size: 40px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#left:hover , #right:hover
+{
+    color: orange;
+    transition: 0.5s;
+}
+.comments-in
+{
+    width: 90%;
+    height: 80%;
+    position: relative;
+    background: none;
+    border-radius: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: commentsİn  1s infinite;
+}
+@keyframes commentsİn
+{
+    0%
+    {
+        opacity: 100%;
+    }
+    100%
+    {
+        opacity: 0%;
+    }
+}
+#person
+{
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#person img
+{
+    width: 90%;
+    height: 90%;
+    position: relative;
+    border-radius: 200px;
+    top: 20px;
+}
+#person h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    text-align: center;
+    text-justify: center;
+    color: white;
+    top: 0px;
+    position: relative;
+    text-shadow: 4px 3px 3px rgb(0, 0, 0)
+}
+#comment-person
+{
+    width: 80%;
+    height: 100%;
+    background: none;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap:break-word;
+}
+#comment-person h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    color: white;
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+    text-shadow: 4px 3px 3px rgb(0, 0, 0)
+}
+
+
+
+@media only screen and (max-width: 1300px)
+{
+    .navbar-buttons ul li
+    {
+        padding: 10px;
+    }
+    .navbar h1
+    {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 1100px)
+{
+    .navbar-buttons
+    {
+        display: none;
+    }
+    .navbar h1
+    {
+        font-size: 30px;
+    }
+    .navbar i 
+    {
+        display: block;
+    }
+    
+}
+@media only screen and (max-width: 600px)
+{
+    .social-media ul li
+    {
+        padding: 20px;
+        position: relative;
+        top: 20px;
+    }
+    #video
+    {
+        width:300%;
+    }
+}
+
+

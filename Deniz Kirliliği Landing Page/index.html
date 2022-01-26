@@ -5,6 +5,23 @@
 
 <body>
     
+    <div class="navbar" id="navbarid">
+        <span id="scrollbar"></span>
+        <h1>SaveForeach</h1>
+        <div class="navbar-buttons">
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT PROJECT</li>
+                <li>OUR MISSION</li>
+                <li>WHO ARE WE?</li>
+                <li>CONTACT US</li>
+                <li>DONATE</li>
+            </ul>
+        </div>
+        <i class="fas fa-bars"></i>
+    </div>
+
+
     <div class="header">
         <div class="header-waves">
             <img id="wave1" src="/waves footer/wave (1).png" alt="">
@@ -13,6 +30,18 @@
             <img id="wave4" src="/waves footer/wave (1).png" alt="">
         </div>
     
+        <div class="home-first">
+            <h1 id="h.m.f-text1">LET'S PROTECT THE OCEANS</h1>
+            <h2 id="h.m.f-text2">JOIN US AND LET'S PROTECT THE OCEANS</h2>
+            <div id="svg">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="blue" d="M66.9,-20.7C74.4,1.5,59.9,32,35.5,50C11,68.1,-23.3,73.7,-46.6,58.2C-69.8,42.7,-81.9,6.1,-72.3,-19C-62.7,-44,-31.3,-57.5,-0.9,-57.2C29.6,-56.9,59.3,-42.9,66.9,-20.7Z" transform="translate(100 100)" />
+                </svg>
+                <h1 class="svgtext">SAVE OCEANS</h1>
+                <button><a href="">DONATE</a></button>
+            </div>
+            
+        </div>
     
         <img class="background" src="/Deniz Kirliliği Landing Page/Sea_Sunset_Illustration_Background_with_Birds_and_Boats [Dönüştürülmüş].png" alt="">
         <div class="background-2">
@@ -23,29 +52,115 @@
     </div>
     
     
-    <div class="sea-body"></div>
-    
-    <div class="footer">
+    <div class="sea-body"></div>,
 
+
+    <div class="parallax-comments">
+        <video id="video" src="/Deniz Kirliliği Landing Page/underwater_-_5385 (Original).mp4" autoplay="autoplay" muted loop></video>
+        <h1>COMMENTS</h1>
+        <div class="comments" id="comments">
+            <i onclick="comments()" id="left" class="fas fa-chevron-left"></i>
+            <div class="comments-in">
+                <div id="person">
+                    <img src="/Deniz Kirliliği Landing Page/handsome-young-businessman-shirt-eyeglasses_85574-6228.jpg" alt="">
+                    <h2>Martin Grow</h2>
+                </div>
+                <div id="comment-person">
+                    <h2>"Bu Söz Nasıl Bir Söz :D Boş Kalmasın Buralar"</h2>
+                </div>
+            </div>
+            <div class="comments-in">
+                <div id="person">
+                    <img src="/Deniz Kirliliği Landing Page/handsome-young-businessman-shirt-eyeglasses_85574-6228.jpg" alt="">
+                    <h2>Martin Grow</h2>
+                </div>
+                <div id="comment-person">
+                    <h2>"Bu Söz Nasıl Bir Söz :D Boş Kalmasın Buralar"</h2>
+                </div>
+            </div>
+            <div class="comments-in">
+                <div id="person">
+                    <img src="/Deniz Kirliliği Landing Page/handsome-young-businessman-shirt-eyeglasses_85574-6228.jpg" alt="">
+                    <h2>Martin Grow</h2>
+                </div>
+                <div id="comment-person">
+                    <h2>"Bu Söz Nasıl Bir Söz :D Boş Kalmasın Buralar"</h2>
+                </div>
+            </div>
+            <i onclick="comments()" id="right" class="fas fa-chevron-right"></i>
+        </div>
     </div>
+
+
+    
+    <div class="WhoAreWe">
+        <h1>WHO ARE WE?</h1>
+        <h2>we are a non-governmental organization <br> that keeps our oceans alive and aims to give a more livable world to future generations. <br>
+            We are making the future live together with the support of non-profits and philanthropists <br>
+            <i>You can also reach us from the form on the side and join us.</i> <br>
+            <b>together to a better future</b>
+        </h2>
+        
+    </div>
+
+    <div class="footer">
+        
+        <div id="wavefooter"></div>
+        <div class="social-media">
+            <ul>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-github"></i></li>
+                <li><i class="fas fa-envelope"></i></li>
+            </ul>
+        </div>
+        <h2>© SaveForeach 2022</h2>
+    </div>
+
+    
+
+    
 
 </body>
 
 
 
 
-
-
 <script>
-    let imgOne = document.getElementById('imgOne')
-    let imgTwo = document.getElementById('imgTwo')
+    let imgOne = document.getElementById('imgOne');
+    let imgTwo = document.getElementById('imgTwo');
+    let svg = document.getElementById('svg');
 
     window.addEventListener("scroll", function() {
-    let scroll = this.scrollY;
-    console.log(scroll);
+        let scroll = this.scrollY;
+        //console.log(scroll);
 
-    imgOne.style.top = 500+ scroll*-1 + "px";
-    imgTwo.style.left = 500+ scroll*-1 + "px";
+        imgOne.style.top = 500+ scroll*-1 + "px";
+        imgTwo.style.left = 500+ scroll*-1 + "px";
+        svg.style.left = 1200 + scroll*1 + "px";
 
-});
+    });
+    //------------------------------------------------------------------
+    window.addEventListener("scroll", function() {
+        let bodyheight = document.body.offsetHeight;
+        let scrollcur = this.scrollY;
+        let total = scrollcur / bodyheight * 150 + "%" ;
+        //console.log(total);
+        document.getElementById("scrollbar").style.setProperty('--scrollAmount', total);
+
+    });
+    //------------------------------------------------------------------
+    function comments()
+    {
+        var c = document.getElementsByClassName("comments-in");
+        for (let index = 0; index < c.length; index++) {
+            c[index].style.animationPlayState = "pause";
+            //c[index].style.display = "none";
+            
+        }
+
+        console.log("ok");
+    }
+    
 </script>
