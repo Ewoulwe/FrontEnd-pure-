@@ -1,0 +1,194 @@
+/*----------------------------------------------------------------------------------------------*/
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background: #020312;
+    
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/*--------------------------HEADER/BASLANGIC-----------------------------------------------------------*/
+header
+{
+    background: white;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 500;
+}
+.Navbar
+{
+    position: relative;
+    height: 100%;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Navbar a
+{
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: none;
+    text-decoration: none;
+    transition: 1s;
+    cursor: pointer;
+}
+.Navbar a:hover
+{
+    border-top: 8px solid orange;
+    transition: 1s;
+}
+.Navbar a h1
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: #020312;
+    font-size: 20px;
+    position: relative;
+    text-transform: uppercase;
+    background: none;
+    justify-self: center;
+}
+/*--------------------------HEADER/BITIS-----------------------------------------------------------*/
+/*--------------------------HOME/BASLANGIC-----------------------------------------------------------*/
+.home
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    
+}
+#home-bg
+{
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    position: absolute;
+}
+#home-name
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    background: none;
+    margin-left: 150px;
+}
+#home-job
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 40px;
+    position: relative;
+    margin-left: 150px;
+}
+#home-downButton
+{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: rgb(216, 79, 0);
+    align-self: flex-start;
+    bottom: 40px;
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+#home-downButton
+{
+    font-size: 50px;
+    vertical-align: c;
+    color: white;
+}
+.home-socialMedia
+{
+    position: relative;
+    background: none;
+    height: 30px;
+    margin-left: 150px;
+}
+.home-socialMedia i
+{
+    font-size: 25px;
+    margin-right: 20px;
+    color: rgb(190, 190, 190);
+    transition: 1s;
+}
+.home-socialMedia i:hover
+{
+    color: rgb(216, 79, 0);
+    transition: 1s;
+}
+
+
+
+
+/*--------------------------HOME/BITIS-----------------------------------------------------------*/
+/*--------------------------ABOUTME/BASLANGIC-----------------------------------------------------------*/
+.AboutMe
+{
+    background: green;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: relative;
+    
+}
+/*--------------------------ABOUTME/BITIS-----------------------------------------------------------*/
+/*--------------------------MYSKİLLS/BASLANGIC-----------------------------------------------------------*/
+.MySkills
+{
+    background: yellow;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: relative;
+    
+}
+/*--------------------------MYSKİLLS/BITIS-----------------------------------------------------------*/
+/*--------------------------MYSTATUS/BASLANGIC-----------------------------------------------------------*/
+.MyStatus
+{
+    background: orange;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: relative;
+    
+}
+/*--------------------------MYSTATUS/BITIS-----------------------------------------------------------*/
+/*--------------------------PROJECTS/BASLANGIC-----------------------------------------------------------*/
+.Projects
+{
+    background: red;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: relative;
+    
+}
+/*--------------------------PROJECTS/BITIS-----------------------------------------------------------*/
+/*--------------------------CONTACT/BASLANGIC-----------------------------------------------------------*/
+.Contact
+{
+    background: rebeccapurple;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: relative;
+    
+}
+/*--------------------------CONTACT/BITIS-----------------------------------------------------------*/

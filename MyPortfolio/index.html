@@ -1,0 +1,263 @@
+
+<link rel="stylesheet" href="index.css">
+<script src="https://kit.fontawesome.com/fd7aba4fca.js" crossorigin="anonymous"></script>
+
+<body>
+    <header>
+        <div class="NameOrLogo">
+
+        </div>
+        <div class="Navbar">
+            <a id="B1" class="buttons"><h1>AboutMe</h1></a>
+            <a id="B2" class="buttons"><h1>home</h1></a>
+            <a id="B3" class="buttons"><h1>MySkills</h1></a>
+            <a id="B4" class="buttons"><h1>MyStatus</h1></a>
+            <a id="B5" class="buttons"><h1>Projects</h1></a>
+            <a id="B6" class="buttons"><h1>Contact</h1></a>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <img id="home-bg" src="/MyPortfolio/starry-night-nature-background-with-mountains-aesthetic-remixed-media.jpg" alt="">
+        <div class="home-socialMedia">
+            <i class="fab fa-instagram-square"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-github-square"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fas fa-envelope"></i>
+        </div>
+        <h1 id="home-name">I am Ishak Yondemli</h1>
+        <h1 id="home-job">fddddd</h1>
+        <a id="home-downButton" href=""><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <section class="AboutMe" id="AboutMe">
+        
+    </section>
+
+    <section class="MySkills" id="MySkills">
+        
+    </section>
+
+    <section class="MyStatus" id="MyStatus">
+        
+    </section>
+
+    <section class="Projects" id="Projects">
+        
+    </section>
+
+    <section class="Contact" id="Contact">
+        
+    </section>
+</body>
+
+
+<script>
+
+    document.getElementById("home").style.height = visualViewport.height + "px";
+    document.getElementById("home").style.width = visualViewport.width + "px";
+
+    document.getElementById("AboutMe").style.height = visualViewport.height  + "px";
+    document.getElementById("AboutMe").style.width = visualViewport.width  + "px";
+    document.getElementById("AboutMe").style.left = visualViewport.width  + "px";
+
+    document.getElementById("MySkills").style.height = visualViewport.height + "px";
+    document.getElementById("MySkills").style.width = visualViewport.width + "px";
+    
+    document.getElementById("MyStatus").style.height = visualViewport.height  + "px";
+    document.getElementById("MyStatus").style.width = visualViewport.width  + "px";
+    document.getElementById("MyStatus").style.left = visualViewport.width  + "px";
+
+    document.getElementById("Projects").style.height = visualViewport.height + "px";
+    document.getElementById("Projects").style.width = visualViewport.width + "px";
+
+    document.getElementById("Contact").style.height = visualViewport.height  + "px";
+    document.getElementById("Contact").style.width = visualViewport.width  + "px";
+    document.getElementById("Contact").style.left = visualViewport.width  + "px";
+
+    console.log(visualViewport.height)
+    window.onresize = function(event) {
+        
+        document.getElementById("home").style.height = visualViewport.height + "px";
+        document.getElementById("home").style.width = visualViewport.width + "px";
+
+        document.getElementById("AboutMe").style.height = visualViewport.height  + "px";
+        document.getElementById("AboutMe").style.width = visualViewport.width  + "px";
+        document.getElementById("AboutMe").style.left = visualViewport.width  + "px";
+
+        document.getElementById("MySkills").style.height = visualViewport.height + "px";
+        document.getElementById("MySkills").style.width = visualViewport.width + "px";
+        
+        document.getElementById("MyStatus").style.height = visualViewport.height  + "px";
+        document.getElementById("MyStatus").style.width = visualViewport.width  + "px";
+        document.getElementById("MyStatus").style.left = visualViewport.width  + "px";
+
+        document.getElementById("Projects").style.height = visualViewport.height + "px";
+        document.getElementById("Projects").style.width = visualViewport.width + "px";
+
+        document.getElementById("Contact").style.height = visualViewport.height  + "px";
+        document.getElementById("Contact").style.width = visualViewport.width  + "px";
+        document.getElementById("Contact").style.left = visualViewport.width  + "px";
+
+    }
+
+
+
+    let all_btn = document.querySelectorAll(".buttons");
+    all_btn.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            //console.log(this.innerHTML + " is clicked");
+
+            if(this.innerHTML == "<h1>AboutMe</h1>")
+            {
+                console.log("button:1");
+                window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+                });
+            }
+            if(this.innerHTML == "<h1>home</h1>")
+            {
+                console.log("button:2");
+                window.scrollTo({
+                top: visualViewport.height*1,
+                left: visualViewport.width,
+                behavior: 'smooth'
+                });
+            }
+            if(this.innerHTML == "<h1>MySkills</h1>")
+            {
+                console.log("button:3");
+                window.scrollTo({
+                top: visualViewport.height*2,
+                left: 0,
+                behavior: 'smooth'
+                });
+            }
+            if(this.innerHTML == "<h1>MyStatus</h1>")
+            {
+                console.log("button:4");
+                window.scrollTo({
+                top: visualViewport.height*3,
+                left: visualViewport.width,
+                behavior: 'smooth'
+                });
+            }
+            if(this.innerHTML == "<h1>Projects</h1>")
+            {
+                console.log("button:5");
+                window.scrollTo({
+                top: visualViewport.height*4,
+                left: 0,
+                behavior: 'smooth'
+                });
+            }
+            if(this.innerHTML == "<h1>Contact</h1>")
+            {
+                console.log("button:6");
+                window.scrollTo({
+                top: visualViewport.height*5,
+                left: visualViewport.width,
+                behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+
+
+    let kaydırmaizni = 1;
+    let kacıncıbolge = 0;
+    let scrolldeger = window.scrollY;
+    window.addEventListener("scroll", function() {
+        
+        if(kaydırmaizni == 1)
+        {
+            if(scrolldeger > window.scrollY)
+            {
+                console.log("yukarı");
+                kaydırmaizni = 0;
+                setTimeout(kontrol,90000);
+                kacıncıbolge = kacıncıbolge - 1;
+            }
+            if(scrolldeger < window.scrollY)
+            {
+                console.log("aşagı");
+                kaydırmaizni = 0;
+                setTimeout(kontrol,9000);
+                kacıncıbolge = kacıncıbolge + 1;
+            }
+        }
+        if(kaydırmaizni == 0)
+        {
+            if(kacıncıbolge == 1)
+            {
+                console.log("button:1");
+                window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+                });
+                
+            }
+            if(kacıncıbolge == 2)
+            {
+                console.log("button:2");
+                window.scrollTo({
+                top: visualViewport.height*1,
+                left: visualViewport.width,
+                behavior: 'smooth'
+                });
+            }
+            if(kacıncıbolge == 3)
+            {
+                console.log("button:3");
+                window.scrollTo({
+                top: visualViewport.height*2,
+                left: 0,
+                behavior: 'smooth'
+                });
+            }
+            if(kacıncıbolge == 4)
+            {
+                console.log("button:4");
+                window.scrollTo({
+                top: visualViewport.height*3,
+                left: visualViewport.width,
+                behavior: 'smooth'
+                });
+            }
+            if(kacıncıbolge == 5)
+            {
+                console.log("button:5");
+                window.scrollTo({
+                top: visualViewport.height*4,
+                left: 0,
+                behavior: 'smooth'
+                });
+            }
+            if(kacıncıbolge == 6)
+            {
+                console.log("button:6");
+                window.scrollTo({
+                top: visualViewport.height*5,
+                left: visualViewport.width,
+                behavior: 'smooth'
+                });
+            }
+        }
+    }); 
+
+    function kontrol()
+    {
+        kaydırmaizni = 1;
+        console.log("kaydırmaizni:" + kaydırmaizni)
+        scrolldeger = window.scrollY;
+        console.log("kacıncıbolge:" + kacıncıbolge);
+    }
+
+
+</script>>
