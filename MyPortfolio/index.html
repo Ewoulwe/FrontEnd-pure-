@@ -1,24 +1,38 @@
 
+<head>
+    
 <link rel="stylesheet" href="index.css">
 <script src="https://kit.fontawesome.com/fd7aba4fca.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+
 
 <body>
     <header>
         <div class="NameOrLogo">
-
+            <h1>Ewondev</h1>
         </div>
         <div class="Navbar">
-            <a id="B1" class="buttons"><h1>AboutMe</h1></a>
-            <a id="B2" class="buttons"><h1>home</h1></a>
-            <a id="B3" class="buttons"><h1>MySkills</h1></a>
-            <a id="B4" class="buttons"><h1>MyStatus</h1></a>
+            <a id="B1" class="buttons"><h1>Home</h1></a>
+            <a id="B2" class="buttons"><h1>AboutMe</h1></a>
+            <a id="B3" class="buttons"><h1>Skills</h1></a>
+            <a id="B4" class="buttons"><h1>Services</h1></a>
             <a id="B5" class="buttons"><h1>Projects</h1></a>
             <a id="B6" class="buttons"><h1>Contact</h1></a>
+            <a id="MenuButton"><i class="fas fa-bars"></i></a>
         </div>
     </header>
 
+    <img id="bg1" src="/MyPortfolio/bir.jpg" alt="">
+    <img id="bg2" src="/MyPortfolio/iki.jpg" alt="">
+    <img id="bg3" src="/MyPortfolio/uc.jpg" alt="">
+    <img id="bg4" src="/MyPortfolio/dort.jpg" alt="">
+    <img id="bg5" src="/MyPortfolio/bes.jpg" alt="">
+    <img id="bg6" src="/MyPortfolio/altı.jpg" alt="">
+
+
     <section class="home" id="home">
-        <img id="home-bg" src="/MyPortfolio/starry-night-nature-background-with-mountains-aesthetic-remixed-media.jpg" alt="">
         <div class="home-socialMedia">
             <i class="fab fa-instagram-square"></i>
             <i class="fab fa-facebook-square"></i>
@@ -27,31 +41,51 @@
             <i class="fab fa-youtube"></i>
             <i class="fas fa-envelope"></i>
         </div>
-        <h1 id="home-name">I am Ishak Yondemli</h1>
-        <h1 id="home-job">fddddd</h1>
-        <a id="home-downButton" href=""><i class="fas fa-chevron-down"></i></a>
+        <h1 id="home-name">I'am Ishak Yondemli</h1>
+        <a id="home-downButton" onclick="window.scrollTo({
+            top: visualViewport.height,
+            left: visualViewport.width,
+            behavior: 'smooth'
+            }); butonkullanımdamı = 1;
+            setTimeout(btnkullanımı, 1000); "><i class="fas fa-chevron-down"></i></a>
+
+        <div id="bubble"><h1 id="home-job">I'am Frond-end Web Designer </h1></div>
     </section>
 
     <section class="AboutMe" id="AboutMe">
+        <h1 id="AboutMe-tıttle" data-shadow='ABOUTME'>ABOUTME</h1>
+        <div id="AboutMe-bg">
+            <img id="AboutMeBg_img_2" src="/MyPortfolio/bb.svg" alt="">
+            <img id="AboutMeBg_img_3" src="/MyPortfolio/cc.svg" alt="">
+            <img id="AboutMe_personalphoto" src="/MyPortfolio/img-man-looking.jpg" alt="">
+            <div id="AboutMe-bgIN"></div>
+            
+        </div>
         
     </section>
 
-    <section class="MySkills" id="MySkills">
-        
+    <section class="Skills" id="Skills">
+        <h1 id="Skills-tıttle" data-shadow='SKILLS'>SKILLS</h1>
+        <div id="Skills-bg"></div>
     </section>
 
-    <section class="MyStatus" id="MyStatus">
-        
+    <section class="Services" id="Services">
+        <h1 id="Services-tıttle" data-shadow='SERVİCES'>SERVİCES</h1>
+        <div id="Services-bg"></div>
     </section>
 
     <section class="Projects" id="Projects">
-        
+        <h1 id="Projects-tıttle" data-shadow='PROJECTS'>PROJECTS</h1>
+        <div id="Projects-bg"></div>
     </section>
 
     <section class="Contact" id="Contact">
-        
+        <h1 id="Contact-tıttle" data-shadow='CONTACT'>CONTACT</h1>
+        <div id="Contact-bg"></div>
     </section>
 </body>
+
+
 
 
 <script>
@@ -63,12 +97,12 @@
     document.getElementById("AboutMe").style.width = visualViewport.width  + "px";
     document.getElementById("AboutMe").style.left = visualViewport.width  + "px";
 
-    document.getElementById("MySkills").style.height = visualViewport.height + "px";
-    document.getElementById("MySkills").style.width = visualViewport.width + "px";
+    document.getElementById("Skills").style.height = visualViewport.height + "px";
+    document.getElementById("Skills").style.width = visualViewport.width + "px";
     
-    document.getElementById("MyStatus").style.height = visualViewport.height  + "px";
-    document.getElementById("MyStatus").style.width = visualViewport.width  + "px";
-    document.getElementById("MyStatus").style.left = visualViewport.width  + "px";
+    document.getElementById("Services").style.height = visualViewport.height  + "px";
+    document.getElementById("Services").style.width = visualViewport.width  + "px";
+    document.getElementById("Services").style.left = visualViewport.width  + "px";
 
     document.getElementById("Projects").style.height = visualViewport.height + "px";
     document.getElementById("Projects").style.width = visualViewport.width + "px";
@@ -76,6 +110,23 @@
     document.getElementById("Contact").style.height = visualViewport.height  + "px";
     document.getElementById("Contact").style.width = visualViewport.width  + "px";
     document.getElementById("Contact").style.left = visualViewport.width  + "px";
+
+    document.getElementById("AboutMe-tıttle").style.width = window.visualViewport.height -50 ;
+    document.getElementById("Skills-tıttle").style.width = window.visualViewport.height -50 ;
+    document.getElementById("Services-tıttle").style.width = window.visualViewport.height -50 ;
+    document.getElementById("Projects-tıttle").style.width = window.visualViewport.height -50 ;
+    document.getElementById("Contact-tıttle").style.width = window.visualViewport.height -50 ;
+
+    let AboutMeBGValue_1 = document.getElementById("AboutMe-tıttle").offsetHeight +50;
+    document.getElementById("AboutMe-bg").style.width = window.visualViewport.width - AboutMeBGValue_1 + "px" ;
+    let SkillsBGValue_1 = document.getElementById("Skills-tıttle").offsetHeight +50;
+    document.getElementById("Skills-bg").style.width = window.visualViewport.width - SkillsBGValue_1 + "px" ;
+    let ServicesBGValue_1 = document.getElementById("Services-tıttle").offsetHeight +50;
+    document.getElementById("Services-bg").style.width = window.visualViewport.width - ServicesBGValue_1 + "px" ;
+    let ProjectsBGValue_1 = document.getElementById("Projects-tıttle").offsetHeight +50;
+    document.getElementById("Projects-bg").style.width = window.visualViewport.width - ProjectsBGValue_1 + "px" ;
+    let ContactBGValue_1 = document.getElementById("Contact-tıttle").offsetHeight +50;
+    document.getElementById("Contact-bg").style.width = window.visualViewport.width - ContactBGValue_1 + "px" ;
 
     console.log(visualViewport.height)
     window.onresize = function(event) {
@@ -87,12 +138,12 @@
         document.getElementById("AboutMe").style.width = visualViewport.width  + "px";
         document.getElementById("AboutMe").style.left = visualViewport.width  + "px";
 
-        document.getElementById("MySkills").style.height = visualViewport.height + "px";
-        document.getElementById("MySkills").style.width = visualViewport.width + "px";
+        document.getElementById("Skills").style.height = visualViewport.height + "px";
+        document.getElementById("Skills").style.width = visualViewport.width + "px";
         
-        document.getElementById("MyStatus").style.height = visualViewport.height  + "px";
-        document.getElementById("MyStatus").style.width = visualViewport.width  + "px";
-        document.getElementById("MyStatus").style.left = visualViewport.width  + "px";
+        document.getElementById("Services").style.height = visualViewport.height  + "px";
+        document.getElementById("Services").style.width = visualViewport.width  + "px";
+        document.getElementById("Services").style.left = visualViewport.width  + "px";
 
         document.getElementById("Projects").style.height = visualViewport.height + "px";
         document.getElementById("Projects").style.width = visualViewport.width + "px";
@@ -101,59 +152,91 @@
         document.getElementById("Contact").style.width = visualViewport.width  + "px";
         document.getElementById("Contact").style.left = visualViewport.width  + "px";
 
+        document.getElementById("AboutMe-tıttle").style.width = window.visualViewport.height -50 ;
+        document.getElementById("Skills-tıttle").style.width = window.visualViewport.height -50 ;
+        document.getElementById("Services-tıttle").style.width = window.visualViewport.height -50 ;
+        document.getElementById("Projects-tıttle").style.width = window.visualViewport.height -50 ;
+        document.getElementById("Contact-tıttle").style.width = window.visualViewport.height -50 ;
+
+        let AboutMeBGValue_2 = document.getElementById("AboutMe-tıttle").offsetHeight +50;
+        document.getElementById("AboutMe-bg").style.width = window.visualViewport.width - AboutMeBGValue_2 + "px" ;
+        let SkillsBGValue_2 = document.getElementById("Skills-tıttle").offsetHeight +50;
+        document.getElementById("Skills-bg").style.width = window.visualViewport.width - SkillsBGValue_2 + "px" ;
+        let ServicesBGValue_2 = document.getElementById("Services-tıttle").offsetHeight +50;
+        document.getElementById("Services-bg").style.width = window.visualViewport.width - ServicesBGValue_2 + "px" ;
+        let ProjectsBGValue_2 = document.getElementById("Projects-tıttle").offsetHeight +50;
+        document.getElementById("Projects-bg").style.width = window.visualViewport.width - ProjectsBGValue_2 + "px" ;
+        let ContactBGValue_2 = document.getElementById("Contact-tıttle").offsetHeight +50;
+        document.getElementById("Contact-bg").style.width = window.visualViewport.width - ContactBGValue_2 + "px" ;
     }
 
-
+    function btnkullanımı()
+    {
+        butonkullanımdamı = 0;
+        //console.log(butonkullanımdamı);
+    }
 
     let all_btn = document.querySelectorAll(".buttons");
     all_btn.forEach(function(btn) {
         btn.addEventListener("click", function() {
             //console.log(this.innerHTML + " is clicked");
-
-            if(this.innerHTML == "<h1>AboutMe</h1>")
+            butonkullanımdamı = 1;
+            //console.log(butonkullanımdamı);
+            setTimeout(btnkullanımı, 1000);
+            if(this.innerHTML == "<h1>Home</h1>")
             {
-                console.log("button:1");
+                //console.log("button:1");
                 window.scrollTo({
                 top: 0,
                 left: 0,
                 behavior: 'smooth'
                 });
+                butunimgopacitykapat();
+                document.getElementById("bg1").style.opacity = "1";
             }
-            if(this.innerHTML == "<h1>home</h1>")
+            if(this.innerHTML == "<h1>AboutMe</h1>")
             {
-                console.log("button:2");
+                //console.log("button:2");
                 window.scrollTo({
                 top: visualViewport.height*1,
                 left: visualViewport.width,
                 behavior: 'smooth'
                 });
+                butunimgopacitykapat();
+                document.getElementById("bg2").style.opacity = "1";
             }
-            if(this.innerHTML == "<h1>MySkills</h1>")
+            if(this.innerHTML == "<h1>Skills</h1>")
             {
-                console.log("button:3");
+                //console.log("button:3");
                 window.scrollTo({
                 top: visualViewport.height*2,
                 left: 0,
                 behavior: 'smooth'
                 });
+                butunimgopacitykapat();
+                document.getElementById("bg3").style.opacity = "1";
             }
-            if(this.innerHTML == "<h1>MyStatus</h1>")
+            if(this.innerHTML == "<h1>Services</h1>")
             {
-                console.log("button:4");
+                //console.log("button:4");
                 window.scrollTo({
                 top: visualViewport.height*3,
                 left: visualViewport.width,
                 behavior: 'smooth'
                 });
+                butunimgopacitykapat();
+                document.getElementById("bg4").style.opacity = "1";
             }
             if(this.innerHTML == "<h1>Projects</h1>")
             {
-                console.log("button:5");
+                //console.log("button:5");
                 window.scrollTo({
                 top: visualViewport.height*4,
                 left: 0,
                 behavior: 'smooth'
                 });
+                butunimgopacitykapat();
+                document.getElementById("bg5").style.opacity = "1";
             }
             if(this.innerHTML == "<h1>Contact</h1>")
             {
@@ -163,101 +246,228 @@
                 left: visualViewport.width,
                 behavior: 'smooth'
                 });
+                butunimgopacitykapat();
+                document.getElementById("bg6").style.opacity = "1";
             }
         });
     });
 
-
-
-    let kaydırmaizni = 1;
-    let kacıncıbolge = 0;
-    let scrolldeger = window.scrollY;
-    window.addEventListener("scroll", function() {
-        
-        if(kaydırmaizni == 1)
-        {
-            if(scrolldeger > window.scrollY)
-            {
-                console.log("yukarı");
-                kaydırmaizni = 0;
-                setTimeout(kontrol,90000);
-                kacıncıbolge = kacıncıbolge - 1;
-            }
-            if(scrolldeger < window.scrollY)
-            {
-                console.log("aşagı");
-                kaydırmaizni = 0;
-                setTimeout(kontrol,9000);
-                kacıncıbolge = kacıncıbolge + 1;
-            }
-        }
-        if(kaydırmaizni == 0)
-        {
-            if(kacıncıbolge == 1)
-            {
-                console.log("button:1");
-                window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'
-                });
-                
-            }
-            if(kacıncıbolge == 2)
-            {
-                console.log("button:2");
-                window.scrollTo({
-                top: visualViewport.height*1,
-                left: visualViewport.width,
-                behavior: 'smooth'
-                });
-            }
-            if(kacıncıbolge == 3)
-            {
-                console.log("button:3");
-                window.scrollTo({
-                top: visualViewport.height*2,
-                left: 0,
-                behavior: 'smooth'
-                });
-            }
-            if(kacıncıbolge == 4)
-            {
-                console.log("button:4");
-                window.scrollTo({
-                top: visualViewport.height*3,
-                left: visualViewport.width,
-                behavior: 'smooth'
-                });
-            }
-            if(kacıncıbolge == 5)
-            {
-                console.log("button:5");
-                window.scrollTo({
-                top: visualViewport.height*4,
-                left: 0,
-                behavior: 'smooth'
-                });
-            }
-            if(kacıncıbolge == 6)
-            {
-                console.log("button:6");
-                window.scrollTo({
-                top: visualViewport.height*5,
-                left: visualViewport.width,
-                behavior: 'smooth'
-                });
-            }
-        }
-    }); 
-
-    function kontrol()
+    function butunimgopacitykapat()
     {
-        kaydırmaizni = 1;
-        console.log("kaydırmaizni:" + kaydırmaizni)
-        scrolldeger = window.scrollY;
-        console.log("kacıncıbolge:" + kacıncıbolge);
+        document.getElementById("bg1").style.opacity = "0";
+        document.getElementById("bg2").style.opacity = "0";
+        document.getElementById("bg3").style.opacity = "0";
+        document.getElementById("bg4").style.opacity = "0";
+        document.getElementById("bg5").style.opacity = "0";
+        document.getElementById("bg6").style.opacity = "0";
     }
 
+
+
+
+    let scrollyonu = window.scrollY;
+    let hangiyondeger = 0;
+    let hanggibolge = 0;
+    let butonkullanımdamı = 0;
+
+    window.addEventListener("scroll" , function(){
+
+        if(butonkullanımdamı == 0)
+        {
+            if(scrollyonu < window.scrollY)
+            {
+                //console.log("aşağı");
+                scrollyonu = window.scrollY;
+                hangiyondeger = 2;
+            }
+            if(scrollyonu > window.scrollY)
+            {
+                //console.log("yukarı");
+                scrollyonu = window.scrollY;
+                hangiyondeger = 1;
+            }
+        }
+
+        
+
+        if(hangiyondeger == 2 && butonkullanımdamı == 0)
+        {
+            if(scrollY >= 0)
+            {
+                //console.log("1.bolge");
+                hanggibolge = 1;
+            }
+            if(scrollY >= window.visualViewport.height +200)
+            {
+                //console.log("2.bolge");
+                hanggibolge = 2;
+            }
+            if(scrollY >= window.visualViewport.height *2 +200 )
+            {
+                //console.log("3.bolge");
+                hanggibolge = 3;
+            }
+            if(scrollY >= window.visualViewport.height *3 +200 )
+            {
+                //console.log("4.bolge");
+                hanggibolge = 4;
+            }
+            if(scrollY >= window.visualViewport.height *4 +200)
+            {
+                //console.log("5.bolge");
+                hanggibolge = 5;
+            }
+            if(scrollY >= window.visualViewport.height *5 +200)
+            {
+                //console.log("6.bolge");
+                hanggibolge = 6;
+            }
+
+            if(hanggibolge == 1)
+            {
+                window.scrollTo(window.scrollX+20,window.scrollY);
+                document.getElementById("bg2").style.opacity = "1";
+            }
+            if(hanggibolge == 2)
+            {
+                window.scrollTo(window.scrollX-20,window.scrollY);
+                document.getElementById("bg3").style.opacity = "1";
+            }
+            if(hanggibolge == 3)
+            {
+                window.scrollTo(window.scrollX+20,window.scrollY);
+                document.getElementById("bg4").style.opacity = "1";
+            }
+            if(hanggibolge == 4)
+            {
+                window.scrollTo(window.scrollX-20,window.scrollY);
+                document.getElementById("bg5").style.opacity = "1";
+            }
+            if(hanggibolge == 5)
+            {
+                window.scrollTo(window.scrollX+20,window.scrollY);
+                document.getElementById("bg6").style.opacity = "1";
+            }
+        }
+
+
+
+
+
+
+        if(hangiyondeger == 1 && butonkullanımdamı == 0)
+        {
+            if(scrollY >= 0)
+            {
+                //console.log("1.bolge");
+                hanggibolge = 1;
+            }
+            if(scrollY >= window.visualViewport.height -200)
+            {
+                //console.log("2.bolge");
+                hanggibolge = 2;
+            }
+            if(scrollY >= window.visualViewport.height *2 -200)
+            {
+                //console.log("3.bolge");
+                hanggibolge = 3;
+            }
+            if(scrollY >= window.visualViewport.height *3 -200)
+            {
+                //console.log("4.bolge");
+                hanggibolge = 4;
+            }
+            if(scrollY >= window.visualViewport.height *4 -200)
+            {
+                //console.log("5.bolge");
+                hanggibolge = 5;
+            }
+            if(scrollY >= window.visualViewport.height *5 -200)
+            {
+                //console.log("6.bolge");
+                hanggibolge = 6;
+            }
+
+
+            if(hanggibolge == 0)
+            {
+                window.scrollTo(window.scrollX+20,window.scrollY);
+                document.getElementById("bg1").style.opacity = "0";
+            }
+            if(hanggibolge == 1)
+            {
+                window.scrollTo(window.scrollX-20,window.scrollY);
+                document.getElementById("bg2").style.opacity = "0";
+            }
+            if(hanggibolge == 2)
+            {
+                window.scrollTo(window.scrollX+20,window.scrollY);
+                document.getElementById("bg3").style.opacity = "0";
+            }
+            if(hanggibolge == 3)
+            {
+                window.scrollTo(window.scrollX-20,window.scrollY);
+                document.getElementById("bg4").style.opacity = "0";
+            }
+            if(hanggibolge == 4)
+            {
+                window.scrollTo(window.scrollX+20,window.scrollY);
+                document.getElementById("bg5").style.opacity = "0";
+            }
+            if(hanggibolge == 5)
+            {
+                window.scrollTo(window.scrollX-20,window.scrollY);
+                document.getElementById("bg6").style.opacity = "0";
+            }
+        }
+
+    })
+
+    setInterval(isDeğistir,5000);
+
+    let widthBubble_1 = document.getElementById("home-job").offsetWidth;
+    //console.log(widthBubble);
+    document.getElementById("bubble").style.width = widthBubble_1 + 40 + "px" ;
+
+    let hangiIs = 1;
+    function jobChange()
+    {
+        if(hangiIs == 1)
+        {
+            document.getElementById("home-job").innerHTML = "Front-End Web Designer";
+        }
+        if(hangiIs == 2)
+        {
+            document.getElementById("home-job").innerHTML = "Game Designer";
+        }
+        if(hangiIs == 3)
+        {
+            document.getElementById("home-job").innerHTML = "Creative";
+        }
+        if(hangiIs == 4)
+        {
+            document.getElementById("home-job").innerHTML = "Graphic Designer";
+        }
+
+        document.getElementById("home-job").id = "home-job_ACTİVE";
+        setTimeout(AnimKapatma,1000);
+
+        let widthBubble_2 = document.getElementById("home-job_ACTİVE").offsetWidth;
+        //console.log(widthBubble_2);
+        document.getElementById("bubble").style.width = widthBubble_2 + 40 + "px" ;
+    }
+    function isDeğistir()
+    {
+        hangiIs = hangiIs + 1;
+        if(hangiIs > 4)
+        {
+            hangiIs = 1;
+        }
+        jobChange();
+    }
+    function AnimKapatma()
+    {
+        document.getElementById("home-job_ACTİVE").id = "home-job";
+    }
 
 </script>>

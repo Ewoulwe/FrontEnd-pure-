@@ -4,9 +4,62 @@ body
     margin: 0px;
     padding: 0px;
     background: #020312;
-    
+    user-select: none;
 }
-
+#bg1
+{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    opacity: 1;
+    z-index: -500;
+    transition: 5s;
+}
+#bg2
+{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    z-index: -500;
+    transition: 5s;
+}
+#bg3
+{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    z-index: -500;
+    transition: 5s;
+}
+#bg4
+{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    z-index: -500;
+    transition: 5s;
+}
+#bg5
+{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    z-index: -500;
+    transition: 5s;
+}
+#bg6
+{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    z-index: -500;
+    transition: 5s;
+}
 /*----------------------------------------------------------------------------------------------*/
 /*--------------------------HEADER/BASLANGIC-----------------------------------------------------------*/
 header
@@ -19,6 +72,27 @@ header
     justify-content: space-around;
     align-items: center;
     z-index: 500;
+}
+.NameOrLogo
+{
+    background: rgb(216, 79, 0);
+    height: 100%;
+    transform: translateY(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    position: relative;
+    border-radius: 10px;
+}
+.NameOrLogo h1
+{
+    background: none;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .Navbar
 {
@@ -39,9 +113,27 @@ header
     transition: 1s;
     cursor: pointer;
 }
+#MenuButton
+{
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: none;
+    text-decoration: none;
+    transition: 1s;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#MenuButton i
+{
+    font-size: 30px;
+    color: black;
+}
 .Navbar a:hover
 {
-    border-top: 8px solid orange;
+    border-top: 8px solid rgb(216, 79, 0);
     transition: 1s;
 }
 .Navbar a h1
@@ -67,13 +159,6 @@ header
     align-items: left;
     
 }
-#home-bg
-{
-    width: 100%;
-    height: 100%;
-    z-index: -5;
-    position: absolute;
-}
 #home-name
 {
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -82,15 +167,6 @@ header
     font-size: 50px;
     position: relative;
     background: none;
-    margin-left: 150px;
-}
-#home-job
-{
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    color: white;
-    font-size: 40px;
-    position: relative;
     margin-left: 150px;
 }
 #home-downButton
@@ -106,12 +182,21 @@ header
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: 0.5s;
+    border-radius: 20px;
 }
 #home-downButton
 {
     font-size: 50px;
     vertical-align: c;
     color: white;
+    cursor: pointer;
+}
+#home-downButton:hover
+{
+    background: white;
+    transition: 0.5s;
+    color: rgb(216, 79, 0);
 }
 .home-socialMedia
 {
@@ -126,6 +211,7 @@ header
     margin-right: 20px;
     color: rgb(190, 190, 190);
     transition: 1s;
+    cursor: pointer;
 }
 .home-socialMedia i:hover
 {
@@ -133,62 +219,458 @@ header
     transition: 1s;
 }
 
+#bubble
+{
+position: relative;
+width: 545px;
+padding: 0px;
+background: none;
+border:3px solid white;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+margin-left: 150px;
+}
 
-
-
+#bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 15px;
+border-color: white transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -15px;
+left: 69px;
+}
+#home-job
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 40px;
+    position: relative;
+    margin-left: 20px;
+    animation: homeJob 1s ;
+    background: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+#home-job_ACTİVE
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 40px;
+    position: relative;
+    margin-left: 20px;
+    animation: homeJob 1s infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+@keyframes homeJob
+{
+    0%
+    {
+        top: 30px;
+        opacity: 0%;
+    }
+    100%
+    {
+        top: 0px;
+        opacity: 100%;
+    }
+}
 /*--------------------------HOME/BITIS-----------------------------------------------------------*/
 /*--------------------------ABOUTME/BASLANGIC-----------------------------------------------------------*/
 .AboutMe
 {
-    background: green;
     width: 100%;
     height: 100%;
     top: 0px;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+#AboutMe-tıttle
+{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vw; 
+    text-shadow: .03em .03em 0 rgb(0, 0, 0);
+    position: relative;
+    width: 10;
+    left: -43vw;
+    background: none;
+    transform: rotateZ(270deg);
+    border-radius: 20px;
+}
+#AboutMe-tıttle::after
+{
+    content: attr(data-shadow);
+    position: absolute;
+    left: .10em;
+    top: 0.1em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(235, 233, 224, 0.575) 45%,
+        rgba(235, 233, 224, 0.452) 55%,
+        transparent 0
+        );
+        background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shad-anim 65s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+#AboutMe-bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    background: #020312be;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    overflow: hidden;
+    z-index: -2;
+}
+#AboutMe-bgIN
+{
+    width: 100%;
+    height: 100%;
+    background: #0203127a;   
+    backdrop-filter: blur(5px);
+    z-index: 500;
+}
+#AboutMe_personalphoto
+{
+    -webkit-mask-image: url(/MyPortfolio/aa.svg);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    top: 20%;
+}
+#AboutMeBg_img_2
+{
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    right: -5%;
+    top: -4%;
+    transform: rotateZ(180deg);
+    z-index: -1;
+}
+#AboutMeBg_img_3
+{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: -15%;
+    right: -5%;
+    transform: rotateZ(300deg);
+    z-index: -1;
 }
 /*--------------------------ABOUTME/BITIS-----------------------------------------------------------*/
 /*--------------------------MYSKİLLS/BASLANGIC-----------------------------------------------------------*/
-.MySkills
+.Skills
 {
-    background: yellow;
     width: 100%;
     height: 100%;
     top: 0px;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+#Skills-tıttle
+{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vw; 
+    text-shadow: .03em .03em 0 rgb(0, 0, 0);
+    position: relative;
+    width: 10;
+    left: -43vw;
+    background: none;
+    transform: rotateZ(270deg);
+    border-radius: 20px;
+}
+#Skills-tıttle::after
+{
+    content: attr(data-shadow);
+    position: absolute;
+    left: .10em;
+    top: 0.1em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(235, 233, 224, 0.575) 45%,
+        rgba(235, 233, 224, 0.452) 55%,
+        transparent 0
+        );
+        background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shad-anim 65s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+#Skills-bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #020312;
+    backdrop-filter: blur(2px);
+    right: 0px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
 }
 /*--------------------------MYSKİLLS/BITIS-----------------------------------------------------------*/
 /*--------------------------MYSTATUS/BASLANGIC-----------------------------------------------------------*/
-.MyStatus
+.Services
 {
-    background: orange;
     width: 100%;
     height: 100%;
     top: 0px;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+#Services-tıttle
+{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vw; 
+    text-shadow: .03em .03em 0 rgb(0, 0, 0);
+    position: relative;
+    width: 10;
+    left: -43vw;
+    background: none;
+    transform: rotateZ(270deg);
+    border-radius: 20px;
+}
+#Services-tıttle::after
+{
+    content: attr(data-shadow);
+    position: absolute;
+    left: .10em;
+    top: 0.1em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(235, 233, 224, 0.575) 45%,
+        rgba(235, 233, 224, 0.452) 55%,
+        transparent 0
+        );
+        background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shad-anim 65s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+#Services-bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #020312;
+    backdrop-filter: blur(2px);
+    right: 0px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
 }
 /*--------------------------MYSTATUS/BITIS-----------------------------------------------------------*/
 /*--------------------------PROJECTS/BASLANGIC-----------------------------------------------------------*/
 .Projects
 {
-    background: red;
     width: 100%;
     height: 100%;
     top: 0px;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+#Projects-tıttle
+{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vw; 
+    text-shadow: .03em .03em 0 rgb(0, 0, 0);
+    position: relative;
+    width: 10;
+    left: -43vw;
+    background: none;
+    transform: rotateZ(270deg);
+    border-radius: 20px;
+}
+#Projects-tıttle::after
+{
+    content: attr(data-shadow);
+    position: absolute;
+    left: .10em;
+    top: 0.1em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(235, 233, 224, 0.575) 45%,
+        rgba(235, 233, 224, 0.452) 55%,
+        transparent 0
+        );
+        background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shad-anim 65s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+#Projects-bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #020312;
+    backdrop-filter: blur(2px);
+    right: 0px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
 }
 /*--------------------------PROJECTS/BITIS-----------------------------------------------------------*/
 /*--------------------------CONTACT/BASLANGIC-----------------------------------------------------------*/
 .Contact
 {
-    background: rebeccapurple;
     width: 100%;
     height: 100%;
     top: 0px;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
 }
-/*--------------------------CONTACT/BITIS-----------------------------------------------------------*/
+#Contact-tıttle
+{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vw; 
+    text-shadow: .03em .03em 0 rgb(0, 0, 0);
+    position: relative;
+    width: 10;
+    left: -43vw;
+    background: none;
+    transform: rotateZ(270deg);
+    border-radius: 20px;
+}
+#Contact-tıttle::after
+{
+    content: attr(data-shadow);
+    position: absolute;
+    left: .10em;
+    top: 0.1em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(235, 233, 224, 0.575) 45%,
+        rgba(235, 233, 224, 0.452) 55%,
+        transparent 0
+        );
+        background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shad-anim 65s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+#Contact-bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #020312;
+    backdrop-filter: blur(2px);
+    right: 0px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+/*--------------------------CONTACT/BITIS-----------------------------------------------------------*/ 
+/*--------------------------MEDYA SORGULARI/BASLANGIC-----------------------------------------------------------*/
+/*--------------------------MEDYA SORGULARI/BITIS-----------------------------------------------------------*/
+/*NAVBAR*/
+@media only screen and (max-width: 1000px)
+{
+    header
+    {
+        justify-content: space-between;
+    }
+    .NameOrLogo
+    {
+        left: 50px;
+    }
+    .buttons
+    {
+        display: none;
+    }
+    #MenuButton
+    {
+        display: flex;
+    }
+}
+
+
