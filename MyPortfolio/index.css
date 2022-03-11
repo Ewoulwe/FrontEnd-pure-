@@ -5,6 +5,7 @@ body
     padding: 0px;
     background: #020312;
     user-select: none;
+    
 }
 #bg1
 {
@@ -296,18 +297,29 @@ left: 69px;
     align-items: center;
     background: none;
 }
+#AboutMe-tıttleDiv
+{
+    width: 15%;
+    height: 100%;
+    background: none;
+    position: relative;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 #AboutMe-tıttle
 {
     display: inline-block;
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7vw; 
+    font-size: 4vw; 
     text-shadow: .03em .03em 0 rgb(0, 0, 0);
     position: relative;
-    width: 10;
-    left: -43vw;
+    left: -10px;
     background: none;
-    transform: rotateZ(270deg);
     border-radius: 20px;
 }
 #AboutMe-tıttle::after
@@ -339,15 +351,14 @@ left: 69px;
 
 #AboutMe-bg
 {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 85%;
     height: 100%;
     right: 0px;
     background: #020312be;
     border-bottom-left-radius: 40px;
     border-top-left-radius: 40px;
     overflow: hidden;
-    z-index: -2;
 }
 #AboutMe-bgIN
 {
@@ -361,13 +372,12 @@ left: 69px;
 {
     -webkit-mask-image: url(/MyPortfolio/aa.svg);
     -webkit-mask-size: 100%;
+    -webkit-mask-position-y: -3vw;
     -webkit-mask-repeat: no-repeat;
-    width: 500px;
-    height: 600px;
-    position: absolute;
+    width: 25vw;
+    height: 30vw;
+    position: relative;
     z-index: 1;
-    left: 10%;
-    top: 20%;
 }
 #AboutMeBg_img_2
 {
@@ -389,6 +399,140 @@ left: 69px;
     transform: rotateZ(300deg);
     z-index: -1;
 }
+.AboutMe-elements
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: none;
+    z-index: 10;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.AboutMe-elements div
+{
+    margin-top: 20px;
+}
+#about-name
+{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    transform: translateY(-100px);
+}
+#about-desprc
+{
+    color: rgb(192, 192, 192);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    transform: translateY(-100px);
+}
+.AboutMe-elements li
+{
+    color: rgb(182, 182, 182);
+    list-style: none;
+    font-size: 3.5em;
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    border-radius: 20px;
+    background: black;
+    margin-left: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    top: -100px;
+}
+.AboutMe-elements li:hover
+{
+    color: white;
+}
+.AboutMe-elements li:hover::after
+{
+    transition: 0.5s;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    border-radius: 20px;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        #ffffff 45%,
+        #ffffff 55%,
+        transparent 0
+    );
+    background-size: 10%  10%;
+    top: 3px;
+    right: -3px;
+    position: absolute;
+    animation: shad-anim 6s linear infinite;
+}
+@keyframes shad-anim {
+    0% {background-position: 0 0}
+    100% {background-position: 100% -100%}
+}
+.AboutMe-elements button
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 0px;
+    border: none;
+    color: rgb(182, 182, 182);
+    background: none;
+    border: 2px solid #ffffff;
+    font-size: 20px;
+    position: relative;
+    transition: 1s;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    top: -100px;
+}
+.AboutMe-elements button:hover
+{
+    border: none;
+    color: white;
+    background: none;
+    border-radius: 20px;
+    transition: 1s;
+    cursor: pointer;
+
+}
+.AboutMe-elements button::before
+{
+    content: "";
+    width: 50px;
+    height: 90%;
+    border: 2px solid white;
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: -70px;
+    border-radius: 50px;
+    transition: 1s;
+}
+.AboutMe-elements button:hover::before
+{
+    transition: 1s;
+    content: "";
+    width: 99%;
+    height: 90%;
+    border: 2px solid white;
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+}
 /*--------------------------ABOUTME/BITIS-----------------------------------------------------------*/
 /*--------------------------MYSKİLLS/BASLANGIC-----------------------------------------------------------*/
 .Skills
@@ -402,18 +546,29 @@ left: 69px;
     align-items: center;
     background: none;
 }
+#Skills-tıttleDiv
+{
+    width: 15%;
+    height: 100%;
+    background: none;
+    position: relative;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 #Skills-tıttle
 {
     display: inline-block;
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7vw; 
+    font-size: 4vw; 
     text-shadow: .03em .03em 0 rgb(0, 0, 0);
     position: relative;
-    width: 10;
-    left: -43vw;
+    left: -10px;
     background: none;
-    transform: rotateZ(270deg);
     border-radius: 20px;
 }
 #Skills-tıttle::after
@@ -445,10 +600,10 @@ left: 69px;
 
 #Skills-bg
 {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 85%;
     height: 100%;
-    background: #020312;
+    background: #020312e1;
     backdrop-filter: blur(2px);
     right: 0px;
     border-bottom-left-radius: 40px;
@@ -467,18 +622,29 @@ left: 69px;
     align-items: center;
     background: none;
 }
+#Services-tıttleDiv
+{
+    width: 15%;
+    height: 100%;
+    background: none;
+    position: relative;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 #Services-tıttle
 {
     display: inline-block;
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7vw; 
+    font-size: 4vw; 
     text-shadow: .03em .03em 0 rgb(0, 0, 0);
     position: relative;
-    width: 10;
-    left: -43vw;
+    left: -10px;
     background: none;
-    transform: rotateZ(270deg);
     border-radius: 20px;
 }
 #Services-tıttle::after
@@ -510,10 +676,10 @@ left: 69px;
 
 #Services-bg
 {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 85%;
     height: 100%;
-    background: #020312;
+    background: #020312e1;
     backdrop-filter: blur(2px);
     right: 0px;
     border-bottom-left-radius: 40px;
@@ -532,18 +698,29 @@ left: 69px;
     align-items: center;
     background: none;
 }
+#Projects-tıttleDiv
+{
+    width: 15%;
+    height: 100%;
+    background: none;
+    position: relative;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 #Projects-tıttle
 {
     display: inline-block;
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7vw; 
+    font-size: 4vw; 
     text-shadow: .03em .03em 0 rgb(0, 0, 0);
     position: relative;
-    width: 10;
-    left: -43vw;
+    left: -10px;
     background: none;
-    transform: rotateZ(270deg);
     border-radius: 20px;
 }
 #Projects-tıttle::after
@@ -575,10 +752,10 @@ left: 69px;
 
 #Projects-bg
 {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 85%;
     height: 100%;
-    background: #020312;
+    background: #020312e1;
     backdrop-filter: blur(2px);
     right: 0px;
     border-bottom-left-radius: 40px;
@@ -597,18 +774,29 @@ left: 69px;
     align-items: center;
     background: none;
 }
+#Contact-tıttleDiv
+{
+    width: 15%;
+    height: 100%;
+    background: none;
+    position: relative;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 #Contact-tıttle
 {
     display: inline-block;
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7vw; 
+    font-size: 4vw; 
     text-shadow: .03em .03em 0 rgb(0, 0, 0);
     position: relative;
-    width: 10;
-    left: -43vw;
+    left: -10px;
     background: none;
-    transform: rotateZ(270deg);
     border-radius: 20px;
 }
 #Contact-tıttle::after
@@ -630,25 +818,274 @@ left: 69px;
         background-size: .05em .05em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shad-anim 65s linear infinite;
+    animation: shad-animm 65s linear infinite;
     }
 
-@keyframes shad-anim {
+@keyframes shad-animm {
   0% {background-position: 0 0}
   0% {background-position: 100% -100%}
   }
 #Contact-bg
 {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 85%;
     height: 100%;
-    background: #020312;
+    background: #020312e1;
     backdrop-filter: blur(2px);
     right: 0px;
     border-bottom-left-radius: 40px;
     border-top-left-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 50px;
+}
+#contactbg-tıttle
+{
+    font-size: 1.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    position: relative;
+    background: none;
+}
+#contactbg-icons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: 100%;
+}
+#contactbg-cntctandform
+{
+    position: relative;
+    width: 100%;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+#contactbg-cntct
+{
+    position: relative;
+    width: 20%;
+    background: none;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.divs
+{
+    position: relative;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.divs ion-icon
+{
+    position: relative;
+    color: white;
+    border-radius: 50px;
+    font-size: 1vw;
+}
+.divs h1
+{
+    position: relative;
+    color: white;
+    border-radius: 50px;
+    font-size: 0.8vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+#contactbg-form
+{
+    position: relative;
+    width: 60%;
+    background: none;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
+
+#contactbg-iconsDİVS
+{
+    display: flex;
+    width: 250px;
+    height: 150px;
+    background: none;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contactbg-iconsDİVS ion-icon
+{
+    font-size: 2.8vw;
+    color: white;
+}
+#contactbg-iconsDİVS h1
+{
+    font-size: 0.8vw;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+.divs
+{
+    width: 100%;
+    height: 3vw;
+    border-radius: 0px;
+    border: none;
+    color: rgb(182, 182, 182);
+    background: none;
+    border: 2px solid #ffffff;
+    position: relative;
+    transition: 1s;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.divs h1
+{
+    font-size: 1vw;
+}
+.divs:hover
+{
+    border: none;
+    color: white;
+    background: none;
+    border-radius: 20px;
+    transition: 1s;
+    cursor: pointer;
+
+}
+.divs::before
+{
+    content: "";
+    width: 50px;
+    height: 90%;
+    border: 2px solid white;
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: -70px;
+    border-radius: 50px;
+    transition: 1s;
+}
+.divs:hover::before
+{
+    transition: 1s;
+    content: "";
+    width: 99%;
+    height: 90%;
+    border: 2px solid white;
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+}
+
+#contactbg-form-nameandmail
+{
+    width: 100%;
+    position: relative;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#contactbg-form-nameandmail input
+{
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 2vw;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.294);
+    color: white;
+}
+#contactbg-form-sbcjct
+{
+    width: 100%;
+    position: relative;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contactbg-form-sbcjct input
+{
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 2vw;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.294);
+    color: white;
+}
+#contactbg-form-msg
+{
+    width: 100%;
+    position: relative;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contactbg-form-msg input
+{
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 10vw;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.294);
+    color: white;
+}
+#contactbg-form-sbmt
+{
+    width: 100%;
+    position: relative;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#contactbg-form-sbmt input
+{
+    width: 120px;
+    height: 50px;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.294);
+    color: white;
+    cursor: pointer;
+}
+#contactbg-form-sbmt input:hover
+{
+    border: 1px solid rgb(216, 79, 0);
+    box-shadow: 0px 0px 5px rgb(216, 79, 0);
+}
+
+#contactbg-form-nameandmail input:hover , #contactbg-form-msg input:hover , #contactbg-form-sbcjct input:hover
+{
+    border: 1px solid rgb(216, 79, 0);
+    box-shadow: 0px 0px 5px rgb(216, 79, 0);
+}
 /*--------------------------CONTACT/BITIS-----------------------------------------------------------*/ 
 /*--------------------------MEDYA SORGULARI/BASLANGIC-----------------------------------------------------------*/
 /*--------------------------MEDYA SORGULARI/BITIS-----------------------------------------------------------*/
